@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  .chat-container {
+    height: 100vh;
+  }
+
+  #menu-button .material-symbols-outlined {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+}

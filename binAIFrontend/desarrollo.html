@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bin AI Chat</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="40x40"
+      href="https://github.com/AlbinJunLiang/binAI/blob/main/baico.png?raw=true"
+    />
+
+    <link rel="stylesheet" href="styles/modal.css" />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/hamburger.css" />
+    <link rel="stylesheet" href="styles/mediaqueries.css" />
+    <link rel="stylesheet" href="styles/div-panel.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <!-- Estructura del modal -->
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="modal-title">Título del Modal</h3>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+        <div id="modal-content" class="modal-content">
+          <!-- Contenido dinámico irá aquí -->
+        </div>
+        <div class="modal-footer">
+          <button id="modal-cancel-btn" class="modal-btn modal-cancel-btn">
+            Cancelar
+          </button>
+          <button id="modal-confirm-btn" class="modal-btn modal-confirm-btn">
+            Confirmar
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Botón con icono -->
+    <button id="menu-button" aria-label="Abrir menú">
+      <span class="material-symbols-outlined" id="menu-icon">menu_open</span>
+    </button>
+
+    <!-- Panel lateral -->
+    <nav id="side-panel" aria-hidden="true">
+      <h2 id="panel-title">Opciones</h2>
+
+      <div id="div-info" class="panel-div">
+        <span class="material-symbols-outlined">info</span>
+        Información
+      </div>
+      <!-- HTML corregido -->
+      <div id="div-opcion" class="panel-div general">
+        <span class="material-symbols-outlined">person</span>Sobre el autor
+      </div>
+    </nav>
+
+    <div class="chat-container">
+      <div class="chat-header">Bin AI</div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- Mensaje inicial se agregará con JavaScript -->
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Escribe tu mensaje..."
+          autocomplete="off"
+        />
+        <button id="send-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="functions/modal.js"></script>
+    <script src="functions/panel-script.js"></script>
+    <script src="functions/scripts.js"></script>
+  </body>
+</html>
